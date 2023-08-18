@@ -15,13 +15,16 @@
 
 <body>
 
-  <p>Picker API API Quickstart</p>
+  <div class="card d-block m-3 p-3 shadow shadow-sm">
+    <p>Picker API API Quickstart</p>
 
-  <!--Add buttons to initiate auth sequence and sign out-->
-  <button id="authorize_button" onclick="handleAuthClick()" class="btn btn-primary">Authorize</button>
-  <button id="signout_button" onclick="handleSignoutClick()" class="btn btn-danger">Sign Out</button>
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <button type="button" id="authorize_button" onclick="handleAuthClick()" class="btn btn-primary">Authorize</button>
+    <button type="button" id="signout_button" onclick="handleSignoutClick()" class="btn btn-danger">Sign Out</button>
 
-  <pre id="content" style="white-space: pre-wrap;"></pre>
+    <pre id="content" style="white-space: pre-wrap;"></pre>
+
+  </div>
 
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
