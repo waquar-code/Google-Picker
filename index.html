@@ -22,7 +22,7 @@
     <button type="button" id="authorize_button" onclick="handleAuthClick()" class="btn btn-primary">Authorize</button>
     <button type="button" id="signout_button" onclick="handleSignoutClick()" class="btn btn-danger">Sign Out</button>
 
-    <pre id="content" style="white-space: pre-wrap;" class="card my-3 p-3"></pre>
+    <pre id="content" style="white-space: pre-wrap; display: none;" class="card my-3 p-3"></pre>
 
   </div>
 
@@ -139,6 +139,7 @@
       if (accessToken) {
         accessToken = null;
         google.accounts.oauth2.revoke(accessToken);
+        document.getElementById('content').style.display = 'block';
         document.getElementById('content').innerText = '';
         document.getElementById('authorize_button').innerText = 'Authorize';
         document.getElementById('signout_button').style.visibility = 'hidden';
