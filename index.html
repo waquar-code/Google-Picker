@@ -2,52 +2,14 @@
 <html>
 
 <head>
+  <!-- Required meta tags -->
   <title>WaquarCode | Google Picker</title>
   <meta charset="utf-8" />
-  <style>
-    .btn {
-      display: inline-block;
-      font-weight: 400;
-      color: #212529;
-      text-align: center;
-      vertical-align: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      background-color: transparent;
-      border: 1px solid transparent;
-      padding: .375rem .75rem;
-      font-size: 1rem;
-      line-height: 1.5;
-      border-radius: .25rem;
-      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
-    }
+  <link rel="icon" type="image/x-icon" href="https://waquar-code.github.io/Google-Picker/favicon.ico">
 
-    .btn-primary {
-      color: #fff;
-      background-color: #007bff;
-      border-color: #007bff
-    }
-
-    .btn-primary:hover {
-      color: #fff;
-      background-color: #0069d9;
-      border-color: #0062cc
-    }
-
-    .btn-danger {
-      color: #fff;
-      background-color: #dc3545;
-      border-color: #dc3545
-    }
-
-    .btn-danger:hover {
-      color: #fff;
-      background-color: #c82333;
-      border-color: #bd2130
-    }
-  </style>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
 </head>
 
@@ -60,7 +22,16 @@
   <button id="signout_button" onclick="handleSignoutClick()" class="btn btn-danger">Sign Out</button>
 
   <pre id="content" style="white-space: pre-wrap;"></pre>
-  
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+
+
   <script>
     const credentials = {
       "api_key": "AIzaSyDqenHG7Ul4VOurliUCZYmAvcc17-JAoas",
@@ -77,7 +48,7 @@
 
     // Authorization scopes required by the API; multiple scopes can be
     // included, separated by spaces.
-    const SCOPES = 'https://www.googleapis.com/auth/drive';
+    const SCOPES = 'https://www.googleapis.com/auth/drive.readonly';
 
     // TODO(developer): Set to client ID and API key from the Developer Console
     const CLIENT_ID = credentials.client_id;
