@@ -183,17 +183,17 @@
        */
       async function pickerCallback(data) {
         if (data.action === google.picker.Action.PICKED) {
-          let picker_response = `"Picker response": ${data}`;
+          let picker_response = data;
 
           const document = data[google.picker.Response.DOCUMENTS][0];
           const fileId = document[google.picker.Document.ID];
           console.log(fileId);
           const res = await gapi.client.drive.files.get({ fileId: fileId, fields: "*" });
-          const first_doc_response = `"Drive API response for first document": ${res.result}`;
-          // window.document.getElementById("content").innerText = text;
+          const first_doc_response = res.result;
+          window.document.getElementById("content").style.display = "block";
           jsonViewer.showJSON({
-            picker_response,
-            first_doc_response,
+            "Picker Response": picker_response,
+            "Drive API response for first document": first_doc_response,
           });
         }
       }
